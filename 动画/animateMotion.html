@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+      <div>
+        calcMode <br />
+        path <br />
+        keyPoints (en-US) <br />
+        rotate auto | auto-reverse  指定运动元素的朝向指向路径的方向 <br />
+        origin 制定动画的原点<br />
+      </div>
+    <?xml version="1.0" standalone="no"?>
+      <svg
+        width="650px"
+        height="530px"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient id="orange_red21" gradientTransform="rotate(0)">
+            <stop offset="0%" style="stop-color:#E374FF;
+              stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#FF4090;
+              stop-opacity:1"/>
+          </linearGradient>
+        </defs>
+        <rect width="200" height='50' style="fill: url(#orange_red21)">
+            <animateMotion
+                id="a1"
+               path="M0 0 L100 0 L 200 50"
+                begin="0s" rotate="auto" dur="2s" repeatCount="freeze"></animate>
+        </rect>
+        <rect y="50" width="200" height='50' style="fill: url(#orange_red21)">
+            <animateMotion
+               path="M100 50 L300 100 L300 300 L0 0"
+               keyPoints="0;0.2;0.3;1"
+               keyTimes="0; 0.7;0.8;1"
+                begin="a1.end" dur="2s" repeatCount="freeze"></animate>
+        </rect>
+      </svg>
+  </body>
+</html>

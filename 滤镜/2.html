@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <style>
+      /* Minimum aspect ratio */
+      @media (min-aspect-ratio: 8/5) {
+        div {
+          background: yeelow; /* blue */
+        }
+      }
+
+      /* Maximum aspect ratio */
+      @media (min-aspect-ratio: 375/680) {
+        div {
+          background: green; /* cyan */
+        }
+      }
+
+      /* Exact aspect ratio, put it at the bottom to avoid override*/
+      @media (aspect-ratio: 1/1) {
+        div {
+          background: #f9a; /* red */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="inner" style="width: 375px; height: 667px;">
+      Watch this element as you resize your viewport's width and height.
+    </div>
+  </body>
+</html>

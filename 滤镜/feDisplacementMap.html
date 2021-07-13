@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    preserveAspectRatio 是否强制缩放
+    <svg
+    width="650px"
+    height="530px"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <defs>
+        <filter id="filterRipple">
+           <feDisplacementMap xChannelSelector="B" yChannelSelector="R" scale="30" />
+        </filter>
+    </defs>
+    <image style="filter: url(#filterRipple)" xlink:href="http://www.vanseodesign.com/blog/wp-content/uploads/2013/09/strawberry-fields.jpg" x="0" y="0" />
+    </svg>
+  </body>
+</html>

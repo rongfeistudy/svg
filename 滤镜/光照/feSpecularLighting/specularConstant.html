@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <div>
+      specularConstant 控制镜面反射的反射比率，如果想让光更明亮，这个就应该越小
+    </div> 
+    <svg
+      width="650px"
+      height="530px"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+          <linearGradient id="orange_red" gradientTransform="rotate(45)">
+              <stop offset="0%" style="stop-color:#06A9F6;
+                stop-opacity:1"/>
+              <stop offset="100%" style="stop-color:#51F3FF;
+                stop-opacity:1"/>
+          </linearGradient>
+          <filter id="merge1">
+              <feSpecularLighting lighting-color="blue" in="SourceGraphic" surfaceScale="1" specularConstant="0.5" result="light">
+                  <fePointLight x="-10" y="-60" z="1000"></fePointLight>
+              </feSpecularLighting>
+              <feComposite operator="in" in="light" k1="0.3" k2="0.4" k3="0.4" k4="0" in2="SourceGraphic">
+              </feComposite>
+          </filter>
+      </defs>
+      <path
+        d="M87.38518308007181 58.658898677666066
+        Q100 0 160 0 L600 0 L600 470 L60 470 Q0 470 12.614816919928181 411.34110132233394"
+        style="fill: url(#orange_red)"
+        filter="url(#merge1)"
+      ></path>
+    </svg>
+  </body>
+</html>

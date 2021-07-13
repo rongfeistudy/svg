@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    preserveAspectRatio 是否强制缩放
+      <svg
+        width="650px"
+        height="530px"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+            <filter id="merge1">
+                <feImage xlink:href="http://www.vanseodesign.com/blog/wp-content/uploads/2013/09/strawberry-fields.jpg" result="image"
+                preserveAspectRatio="none"
+                ></feImage>
+                <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur"></feGaussianBlur>
+                <feMerge>
+                    <feMergeNode in="image"></feMergeNode>
+                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                    <feMergeNode in="blur"></feMergeNode>
+                </feMerge>
+            </filter>
+        </defs>
+        <path
+          d="M87.38518308007181 58.658898677666066
+          Q100 0 160 0 L600 0 L600 470 L60 470 Q0 470 12.614816919928181 411.34110132233394"
+          style="fill: #e5e5e5"
+          filter="url(#merge1)"
+        ></path>
+      </svg>
+  </body>
+</html>

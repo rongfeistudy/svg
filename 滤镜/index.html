@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <style>
+     
+    </style>
+  </head>
+  <body>
+    <?xml version="1.0" standalone="no"?>
+    <svg
+    id="dsdfd"
+      width="650px"
+      height="530px"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <linearGradient id="orange_red" gradientTransform="rotate(45)">
+          <stop offset="0%" style="stop-color:#06A9F6;
+            stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#51F3FF;
+            stop-opacity:1"/>
+        </linearGradient>
+        <filter id="f1" x="0" y="0" >
+          <feOffset result="offOut" in="SourceGraphic" dx="10" dy="20" />
+          <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+          values="0 0 0 0 0.4 0 0 0 0 0.4 0 0 0 0 0.78 0 0 0 0.4 0" />
+          <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="10" />
+          <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+        </filter>
+      </defs>
+      <path
+        d="M0 0 L540 0 Q600 0 587.3851830800718 58.658898677666066 L512.614816919928181 411.34110132233394 Q500 470 460 470 L0 470"
+        style="fill:url(#orange_red)" filter="url(#f1)"
+      ></path>
+      </svg>
+      <svg
+        width="650px"
+        height="530px"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient id="orange_red12" gradientTransform="rotate(90)">
+            <stop offset="0%" style="stop-color:rgba(255, 200, 200);
+              stop-opacity: 0.5"/>
+            <stop offset="100%" style="stop-color:#EA3C90;
+              stop-opacity:0"/>
+          </linearGradient>
+          <linearGradient id="orange_red21" gradientTransform="rotate(0)">
+            <stop offset="0%" style="stop-color:#E374FF;
+              stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#FF4090;
+              stop-opacity:1"/>
+          </linearGradient>
+          <filter id="f11" x="0" y="0" >
+            <feOffset result="offOut" in="SourceGraphic" dx="10" dy="20" />
+            <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+            values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0" />
+            <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="10" />
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+          </filter>
+        </defs>
+        <path
+          d="M87.38518308007181 58.658898677666066
+          Q100 0 160 0 L600 0 L600 470 L60 470 Q0 470 12.614816919928181 411.34110132233394"
+          style="fill:url(#orange_red21)" filter="url(#f11)"
+        ></path>
+        <path
+          d="M87.38518308007181 58.658898677666066
+          Q100 0 160 0 L600 0 L600 470 L60 470 Q0 470 12.614816919928181 411.34110132233394"
+          style="fill:url(#orange_red21)" filter="url(#f11)"
+        ></path>
+      </svg>
+  </body>
+</html>
+<!-- <feOffset result="offOut" in="SourceGraphic" dx="10" dy="10" />
+          <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+          <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="10" />
+          <feBlend in="SourceGraphic" in2="blurOut" mode="normal" /> -->
+<!-- 30 * Math.sin(Math.atan(465/100))
+29.329449338833033
+30 * Math.cos(Math.atan(465/100))
+6.3074084599640905
+600 - 6.3074084599640905
+593.6925915400359
+465-29.329449338833033
+435.67055066116694
+435-29.329449338833033
+405.67055066116694 -->

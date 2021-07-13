@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <style>
+     #dsdfd {
+         transform: scaleX(2);
+     }
+    </style>
+  </head>
+  <body>
+    <?xml version="1.0" standalone="no"?>
+    <svg
+      width="700px"
+      height="530px"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <linearGradient id="orange_red" gradientTransform="rotate(45)">
+          <stop offset="0%" style="stop-color:#06A9F6;
+            stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#51F3FF;
+            stop-opacity:1"/>
+        </linearGradient>
+        <filter id="f1" x="0" y="0" >
+          <feOffset result="offOut" in="SourceGraphic" dx="10" dy="20" />
+          <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+          values="0 0 0 0 0.4 0 0 0 0 0.4 0 0 0 0 0.78 0 0 0 0.4 0" />
+          <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="10" />
+          <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+        </filter>
+      </defs>
+      <path
+        d="M9 0 L741 0 L750 9 L750 491 L741 500 L9 500 L0 491 L0 9 L9 0"
+        style="fill:url(#orange_red)" 
+      ></path>
+      </svg>
+  </body>
+</html>

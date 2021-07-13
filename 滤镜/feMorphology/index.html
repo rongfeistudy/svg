@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    preserveAspectRatio 是否强制缩放
+      <svg
+        width="650px"
+        height="530px"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+            <filter id="merge1">
+                <feMorphology  operator="erode" radius="7"></feMorphology>
+            </filter>
+        </defs>
+        <path d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke-width="20" stroke="black" fill="transparent" style="filter: url(#merge1)"/>
+      </svg>
+  </body>
+</html>

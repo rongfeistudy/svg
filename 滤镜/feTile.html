@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+        feTile 就是用纹理来填充
+        <svg
+            width="650px"
+            height="530px"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <defs>
+                <linearGradient id="orange_red" gradientTransform="rotate(45)">
+                    <stop offset="0%" style="stop-color:#06A9F6;
+                    stop-opacity:1"/>
+                    <stop offset="100%" style="stop-color:#51F3FF;
+                    stop-opacity:1"/>
+                </linearGradient>
+                <filter id="merge1">
+                    <feImage xlink:href="https://s.momocdn.com/s1/u/chdbgfibg/112.jpeg" result="image"
+                        preserveAspectRatio="none"
+                    ></feImage>
+                    <feTile in="image" result="image2"></feTile>
+                    <feComposite operator="atop" in="image2" in2="SourceGraphic"></feComposite>
+                </filter>
+            </defs>
+            <path
+            d="M87.38518308007181 58.658898677666066
+            Q100 0 160 0 L600 0 L600 470 L60 470 Q0 470 12.614816919928181 411.34110132233394"
+            style="fill: url(#orange_red)"
+            filter="url(#merge1)"
+            ></path>
+        </svg>
+  </body>
+</html>

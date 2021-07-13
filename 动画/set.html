@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <?xml version="1.0" standalone="no"?>
+      <svg
+        width="650px"
+        height="530px"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient id="orange_red21" gradientTransform="rotate(0)">
+            <stop offset="0%" style="stop-color:#E374FF;
+              stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#FF4090;
+              stop-opacity:1"/>
+          </linearGradient>
+        </defs>
+        <rect width="200" height='50' style="fill: url(#orange_red21)">
+            <animate
+                attributeName="width"
+                attributeType="XML"
+                values="200;100;50;0"
+                keyTimes="0;0.2;0.6;1"
+                dur="10s"
+                calcMode="paced"
+                fill="freeze"></animate>
+        </rect>
+        <rect y="50" width="200" height='50' style="fill: url(#orange_red21); visibility: hidden;">
+          <set
+              attributeName="visibility"
+              attributeType="CSS"
+                to="visible"
+                begin="5s"
+                dur="2s"
+                fill="freeze"></animate>
+        </rect>
+      </svg>
+  </body>
+</html>

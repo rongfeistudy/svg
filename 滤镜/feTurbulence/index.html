@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+      <div>
+          <div>
+            type: turbulence/fractalNoise fractalNoise 更加平滑
+          </div>
+          <div>
+            baseFrequency: 颜色变化频率
+          </div>
+          <div>
+            numOctaves: 数值越大，纹理越细
+          </div>
+          <div>
+            seed: 随机数的开始数字
+          </div>
+      </div>
+    <svg viewBox="0 0 180 100" width="100%">
+        <filter width="100%" height="100%" x="0%" y="0%" id="noise">
+            <feTurbulence type="turbulence" baseFrequency="0.0547184" id="turbulence" numOctaves="111" result="turbulence" seed="1">
+                <animate id="noiseAnimate" attributeName="baseFrequency" values="0;.1;0,0" from="0" to="100" dur="10s" repeatCount="indefinite"></animate>
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="1"
+                                               xChannelSelector="R" yChannelSelector="R"></feDisplacementMap>
+        </filter>
+        <foreignObject width="100%" height="100%">
+        <img src="https://images.unsplash.com/photo-1479981280584-037818c1297d?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" xlink:href="data:https://images.unsplash.com/photo-1479981280584-037818c1297d?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" width="100%" height="100%" x="0" y="0" style="filter: url(&quot;#noise&quot;);"/>
+        </foreignObject>
+        </svg>
+  </body>
+</html>
